@@ -1,2 +1,2 @@
 # Fullerton-Commencement
-Project for CPSC 466 Summer 
+Project for CPSC 466 Summer Session
