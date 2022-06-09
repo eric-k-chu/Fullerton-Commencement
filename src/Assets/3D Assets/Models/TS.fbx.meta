@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: df1f1179cfb28904e82ce9956d216062
+guid: 81a5e83d57630ad44a12d73fc0071e9a
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,23 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Asphalt010
-    second: {fileID: 2100000, guid: bc257e2ecd56e5f419ea056880f3330d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Concrete030
+      name: Concrete030.001
     second: {fileID: 2100000, guid: 7a6bb1a16fda5bd4185aed5c84c72f5c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Concrete034
+      name: Concrete034.001
     second: {fileID: 2100000, guid: 1258b22896090ed429c40396c88dcdc9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Plastic005
-    second: {fileID: 2100000, guid: 518dd518188931f4e83b710c54170699, type: 2}
   materials:
     materialImportMode: 0
     materialName: 0

@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Asphalt010
+    second: {fileID: 2100000, guid: bc257e2ecd56e5f419ea056880f3330d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Concrete030.001
     second: {fileID: 2100000, guid: 7a6bb1a16fda5bd4185aed5c84c72f5c, type: 2}
   - first:
