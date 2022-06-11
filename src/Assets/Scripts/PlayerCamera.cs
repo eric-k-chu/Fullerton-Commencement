@@ -22,7 +22,10 @@ public class PlayerCamera : MonoBehaviour
 
     private void Update()
     {
-        CursorInput();
+        if (Time.timeScale != 0)
+        {
+            CursorInput();
+        }
     }
 
     void CursorInput()

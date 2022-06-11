@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     private float zInput;
     private float groundCheckRadius = 0.4f;
 
-    [SerializeField] private bool isGrounded;
+    private bool isGrounded;
 
     private void Awake()
     {
@@ -27,11 +27,14 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundMask, QueryTriggerInteraction.Ignore);
+        if (Time.timeScale != 0)
+        {
+            isGrounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundMask, QueryTriggerInteraction.Ignore);
 
-        Gravity();
-        PlayerInput();
-        Move();
+            Gravity();
+            PlayerInput();
+            Move();
+        }
     }
 
     // Creating Gravity vector
