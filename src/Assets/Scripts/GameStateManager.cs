@@ -12,6 +12,8 @@ public class GameStateManager : MonoBehaviour
     private void Start()
     {
         currentState = States.Running;
+        Time.timeScale = 1.0f;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
@@ -49,6 +51,7 @@ public class GameStateManager : MonoBehaviour
                 break;
             case States.Paused:
                 Time.timeScale = 1f;
+                Cursor.lockState = CursorLockMode.Locked;
                 pauseMenu?.SetActive(false);
                 break;
             default:
@@ -65,6 +68,7 @@ public class GameStateManager : MonoBehaviour
                 break;
             case States.Paused:
                 Time.timeScale = 0f;
+                Cursor.lockState = CursorLockMode.None;
                 pauseMenu?.SetActive(true);
                 break;
             default:

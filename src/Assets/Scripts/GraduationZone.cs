@@ -26,18 +26,14 @@ public class GraduationZone : MonoBehaviour
 
     private void Update()
     {
-        if (inZone)
+        if (inZone && Time.timeScale != 0)
         {
             if (Input.GetKeyDown(KeyCode.G))
             {
                 EventManager.instance.EndGraduation();
+                graduateUI.SetActive(false);
                 Destroy(gameObject);
             }
         }
-    }
-
-    private void OnDestroy()
-    {
-        graduateUI.SetActive(false);
     }
 }

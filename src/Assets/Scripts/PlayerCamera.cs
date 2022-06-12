@@ -10,15 +10,6 @@ public class PlayerCamera : MonoBehaviour
     private float mouseY;
     private float xRotation = 0f;
 
-    private void Awake()
-    {
-
-    }
-
-    private void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;    
-    }
 
     private void Update()
     {

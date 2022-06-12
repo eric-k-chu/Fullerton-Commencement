@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundMask;
+
+    [SerializeField] private Rigidbody rbCap;
     
     private CharacterController player;
     
@@ -23,6 +25,11 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         player = GetComponent<CharacterController>();   
+    }
+
+    private void Start()
+    {
+        EventManager.instance.onPlayerGraduates += ThrowCap;
     }
 
     private void Update()
@@ -65,6 +72,18 @@ public class PlayerController : MonoBehaviour
     {
         player.Move(moveVector * moveSpeed * Time.deltaTime);
         player.Move(playerVelocity * Time.deltaTime);
+    }
+
+    void ThrowCap()
+    {
+        rbCap.useGravity = true;
+        rbCap.AddForce(Vector3.up * 15f, ForceMode.Impulse);
+        rbCap.transform.parent = null;
+    }
+
+    private void OnDestroy()
+    {
+        EventManager.instance.onPlayerGraduates -= ThrowCap;
     }
 
 
